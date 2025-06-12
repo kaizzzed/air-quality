@@ -39,10 +39,9 @@ dfPrediction = df.copy()
 dfPrediction['City_Name'] = dfPrediction['City']  # Keep original names for display
 le = LabelEncoder()
 dfPrediction['City'] = le.fit_transform(dfPrediction['City'])  # Numerical version for modeling
+df2 = pd.read_csv("Air_Quality.csv") # when analyzing the entire dataset
 
 if page == "Introduction":
-    df2 = pd.read_csv("Air_Quality.csv")
-
     st.subheader("01 Introduction")
     st.markdown("Air pollution causes approximately 7 million premature deaths annually (WHO). This dataset contains records of pollutants and European Air Quality Index (AQI) through January to December 2024 and includes cities from all inhabited continents. Our goal is to predict AQI based on pollutant levels, identify which pollutants most impact AQI, and compare air quality trends across continents.")
 
