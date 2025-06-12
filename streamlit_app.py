@@ -133,7 +133,7 @@ elif page == "Automated Report":
     st.subheader("03 Automated Report")
     if st.button("Generate Report"):
         with st.spinner("Generating report..."):
-            profile = ProfileReport(df,title="Air Quality Report",explorative=True,minimal=True)
+            profile = ProfileReport(df2,title="Air Quality Report",explorative=True,minimal=True)
             st_profile_report(profile)
 
         export = profile.to_html()
